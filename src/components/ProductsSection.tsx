@@ -29,7 +29,7 @@ const products = [
 
 export default function ProductsSection() {
   return (
-    <section id="products" className="relative py-32 px-6 overflow-hidden"
+    <section id="products" className="relative py-40 px-6 overflow-hidden"
       style={{ background: "linear-gradient(180deg, #000 0%, #020818 50%, #000 100%)" }}>
 
       {/* Background grid lines */}
@@ -46,7 +46,7 @@ export default function ProductsSection() {
           <span className="text-xs tracking-[0.4em] uppercase text-[#f5c842] font-semibold">Featured Products</span>
         </div>
 
-        <h2 className="text-4xl md:text-6xl font-black uppercase mb-16">
+        <h2 className="text-4xl md:text-6xl font-black uppercase mb-20">
           <span className="text-white">Choose Your</span>{" "}
           <span className="gold-shimmer">Weapon</span>
         </h2>

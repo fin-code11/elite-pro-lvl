@@ -104,7 +104,7 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-6">
         {/* Top label */}
-        <div className="flex items-center gap-3 mb-6">
+        <div className="flex items-center gap-3 mb-10">
           <div className="h-px w-12 colour-stream opacity-80" />
           <span className="text-xs tracking-[0.4em] uppercase text-[#f5c842] font-semibold">
             Hamilton, ON · Canada
@@ -114,7 +114,7 @@ export default function HeroSection() {
 
         {/* Main headline */}
         <h1
-          className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-none mb-4 animate-float-up"
+          className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-tight mb-8 animate-float-up"
           style={{ animationDelay: "0.1s", opacity: 0 }}
         >
           <span className="gold-shimmer">Elite</span>
@@ -124,14 +124,14 @@ export default function HeroSection() {
 
         {/* Sub headline */}
         <p
-          className="text-lg md:text-2xl font-light tracking-widest uppercase text-gray-300 mb-3 animate-float-up"
+          className="text-lg md:text-2xl font-light tracking-widest uppercase text-gray-300 mb-6 animate-float-up"
           style={{ animationDelay: "0.3s", opacity: 0 }}
         >
           Built by goalkeepers who demand more.
         </p>
 
         <p
-          className="text-sm md:text-base text-gray-400 max-w-xl mb-10 animate-float-up"
+          className="text-sm md:text-base text-gray-400 max-w-xl mb-14 animate-float-up"
           style={{ animationDelay: "0.5s", opacity: 0 }}
         >
           Next LVL grip. Real-World Durability. We exist for the keepers chasing the next level — and for those already there.

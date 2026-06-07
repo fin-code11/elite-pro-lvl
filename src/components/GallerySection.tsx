@@ -35,7 +35,7 @@ const images = [
 
 export default function GallerySection() {
   return (
-    <section id="gallery" className="relative py-32 px-6 bg-black overflow-hidden">
+    <section id="gallery" className="relative py-40 px-6 bg-black overflow-hidden">
       {/* Top colour stream bar */}
       <div className="absolute top-0 left-0 right-0 h-1 colour-stream" />
 
@@ -50,7 +50,7 @@ export default function GallerySection() {
           <span className="text-xs tracking-[0.4em] uppercase text-[#f5c842] font-semibold">In Action</span>
         </div>
 
-        <h2 className="text-4xl md:text-6xl font-black uppercase mb-16">
+        <h2 className="text-4xl md:text-6xl font-black uppercase mb-20">
           <span className="text-white">Capture the</span>{" "}
           <span className="gold-shimmer">Moment</span>
         </h2>

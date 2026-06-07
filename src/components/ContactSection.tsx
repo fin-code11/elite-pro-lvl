@@ -23,7 +23,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-32 px-6 overflow-hidden"
+    <section id="contact" className="relative py-40 px-6 overflow-hidden"
       style={{ background: "linear-gradient(180deg, #000 0%, #020818 100%)" }}>
 
       {/* Blue glow center */}
@@ -37,12 +37,12 @@ export default function ContactSection() {
           <span className="text-xs tracking-[0.4em] uppercase text-[#f5c842] font-semibold">Get In Touch</span>
         </div>
 
-        <h2 className="text-4xl md:text-6xl font-black uppercase mb-16">
+        <h2 className="text-4xl md:text-6xl font-black uppercase mb-20">
           <span className="text-white">Contact</span>{" "}
           <span className="gold-shimmer">Us</span>
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-24">
           {/* Left — info */}
           <div className="space-y-8">
             <p className="text-gray-300 text-lg leading-relaxed">

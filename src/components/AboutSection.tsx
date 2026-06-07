@@ -9,19 +9,19 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="relative py-32 px-6 overflow-hidden bg-black">
+    <section id="about" className="relative py-40 px-6 overflow-hidden bg-black">
       {/* Background glow blob */}
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full opacity-10"
         style={{ background: "radial-gradient(circle, #0066ff 0%, transparent 70%)" }} />
 
       <div className="max-w-7xl mx-auto">
         {/* Section label */}
-        <div className="flex items-center gap-4 mb-12">
+        <div className="flex items-center gap-4 mb-16">
           <div className="h-px flex-1 max-w-[60px] bg-[#f5c842]" />
           <span className="text-xs tracking-[0.4em] uppercase text-[#f5c842] font-semibold">About Us</span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-24 items-center">
           {/* Left — image with corner accents */}
           <div className="relative corner-accent">
             <div className="border-glow overflow-hidden" style={{ clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))" }}>
@@ -39,7 +39,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right — copy */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight">
               <span className="text-white">Our</span>{" "}
               <span className="gold-shimmer">Mission</span>

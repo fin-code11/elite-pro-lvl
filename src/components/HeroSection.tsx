@@ -60,18 +60,16 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative w-full h-screen overflow-hidden">
-      {/* Soccer video background — direct MP4 via Pexels free CDN */}
+      {/* Soccer video background — self-hosted */}
       <video
         autoPlay
         muted
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ filter: "brightness(0.5) saturate(1.2)" }}
+        style={{ filter: "brightness(0.45) saturate(1.3)" }}
       >
-        <source src="https://videos.pexels.com/video-files/3048526/3048526-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-        <source src="https://videos.pexels.com/video-files/3048526/3048526-hd_1920_1080_25fps.mp4" type="video/mp4" />
-        <source src="https://videos.pexels.com/video-files/856958/856958-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        <source src="/videos/soccer-bg.mp4" type="video/mp4" />
       </video>
 
       {/* Overlays */}

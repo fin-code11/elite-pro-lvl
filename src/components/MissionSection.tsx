@@ -11,7 +11,7 @@ export default function MissionSection() {
       <div className="absolute top-10 left-10 w-12 h-12 border-t-2 border-l-2 border-[#f5c842]/25" />
       <div className="absolute bottom-10 right-10 w-12 h-12 border-b-2 border-r-2 border-[#f5c842]/25" />
 
-      <div className="relative z-10 w-full max-w-4xl mx-auto text-center px-4">
+      <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center px-4">
 
         <div className="flex items-center justify-center gap-4 mb-8">
           <div className="h-px w-14" style={{ background: "linear-gradient(to right, transparent, #f5c842)" }} />
@@ -20,8 +20,8 @@ export default function MissionSection() {
         </div>
 
         <p
-          className="font-black uppercase leading-tight text-white mb-8 text-center"
-          style={{ fontSize: "clamp(1.4rem, 3.2vw, 2.6rem)", letterSpacing: "-0.01em", maxWidth: "780px", margin: "0 auto 2rem" }}
+          className="font-black uppercase leading-tight text-white mb-8"
+          style={{ fontSize: "clamp(1.4rem, 3.2vw, 2.6rem)", letterSpacing: "-0.01em", maxWidth: "780px" }}
         >
           To create{" "}
           <span className="gold-shimmer">elite-level gloves</span>
@@ -30,12 +30,12 @@ export default function MissionSection() {
           {" "}or compromise in quality.
         </p>
 
-        <p className="text-gray-500 text-sm leading-relaxed text-center mb-12" style={{ maxWidth: "520px", margin: "0 auto 3rem" }}>
+        <p className="text-gray-500 text-sm leading-relaxed mb-12" style={{ maxWidth: "520px" }}>
           Founded by keepers who understand the demands of the position. We exist to serve
           athletes who train hard, compete fearlessly, and expect their equipment to perform under pressure.
         </p>
 
-        <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+        <div className="grid grid-cols-3 gap-4 w-full max-w-2xl">
           {[
             { label: "Grip", desc: "Next LVL latex that performs in any condition" },
             { label: "Durability", desc: "Built to last through training and match day" },

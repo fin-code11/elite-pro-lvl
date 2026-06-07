@@ -1,4 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Shop", href: "/shop" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function Footer() {
   return (
@@ -22,18 +30,18 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links */}
+          {/* Nav links */}
           <div>
             <div className="text-xs tracking-widest uppercase text-[#f5c842] font-semibold mb-4">Navigation</div>
             <ul className="space-y-2">
-              {["Home", "About", "Products", "Gallery", "Contact"].map((l) => (
-                <li key={l}>
-                  <a
-                    href={`#${l.toLowerCase()}`}
+              {navLinks.map((l) => (
+                <li key={l.label}>
+                  <Link
+                    href={l.href}
                     className="text-gray-400 text-sm hover:text-[#f5c842] transition-colors"
                   >
-                    {l}
-                  </a>
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>

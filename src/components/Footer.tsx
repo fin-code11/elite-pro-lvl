@@ -10,7 +10,7 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black border-t border-blue-900/20 pt-24 pb-12 px-6">
+    <footer className="relative bg-black border-t border-blue-900/20 pb-12 px-6" style={{ paddingTop: "6rem" }}>
       <div className="absolute top-0 left-0 right-0 h-1 colour-stream opacity-60" />
 
       <div className="max-w-6xl mx-auto">

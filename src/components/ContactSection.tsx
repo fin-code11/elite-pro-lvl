@@ -32,11 +32,6 @@ export default function ContactSection() {
 
         {/* Header — centred */}
         <div className="text-center">
-          <div className="flex items-center justify-center gap-4 mb-5">
-            <div className="h-px w-10 bg-[#f5c842]" />
-            <span className="text-[9px] tracking-[0.5em] uppercase text-[#f5c842] font-bold">Get In Touch</span>
-            <div className="h-px w-10 bg-[#f5c842]" />
-          </div>
           <h2 className="font-black uppercase leading-none"
             style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.8rem)" }}>
             <span className="text-white">Contact </span>

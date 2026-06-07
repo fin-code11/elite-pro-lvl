@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StatsTicker from "@/components/StatsTicker";
+import MissionSection from "@/components/MissionSection";
 import AboutSection from "@/components/AboutSection";
 import ProductsSection from "@/components/ProductsSection";
 import GallerySection from "@/components/GallerySection";
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <StatsTicker />
+      <MissionSection />
       <AboutSection />
       <ProductsSection />
       <GallerySection />

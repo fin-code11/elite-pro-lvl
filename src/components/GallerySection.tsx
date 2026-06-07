@@ -6,6 +6,7 @@ const images = [
   { src: "https://img1.wsimg.com/isteam/ip/9e4d488c-6a21-456e-9f59-a4129ed5f7fc/thumbnail_IMG_4934.jpg/:/rs=w:600,cg:true,m", alt: "Goalkeeper save", col: "col-span-1 row-span-1" },
   { src: "https://img1.wsimg.com/isteam/ip/9e4d488c-6a21-456e-9f59-a4129ed5f7fc/throw.jpg/:/rs=w:800,cg:true", alt: "Goalkeeper throw", col: "col-span-1 row-span-1" },
   { src: "https://img1.wsimg.com/isteam/ip/9e4d488c-6a21-456e-9f59-a4129ed5f7fc/Noah%20Gloves%20with%20Logo%20in%20Backbround.jpg/:/", alt: "Noah with gloves", col: "col-span-1 row-span-1" },
+  { src: "https://img1.wsimg.com/isteam/ip/9e4d488c-6a21-456e-9f59-a4129ed5f7fc/Blurred%20Logo%20Noah%20Jump.jfif/:/rs=w:800,h:800,cg:true,m/qt=q:95", alt: "Noah jump with blurred logo", col: "col-span-1 row-span-1" },
 ];
 
 export default function GallerySection() {

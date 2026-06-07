@@ -35,10 +35,12 @@ export default function AboutSection() {
                 unoptimized
               />
             </div>
-            <div className="absolute -bottom-5 -right-5 glass-card border-glow-gold px-5 py-3 z-20"
-              style={{ clipPath: "polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px))" }}>
-              <div className="text-xs tracking-widest uppercase text-[#f5c842] font-black">Hamilton · ON</div>
-              <div className="text-[10px] tracking-widest uppercase text-gray-500 mt-0.5">Canada</div>
+            <div className="mt-4 flex justify-center">
+              <div className="glass-card border-glow-gold px-5 py-3"
+                style={{ clipPath: "polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px))" }}>
+                <div className="text-xs tracking-widest uppercase text-[#f5c842] font-black text-center">Hamilton · ON</div>
+                <div className="text-[10px] tracking-widest uppercase text-gray-500 mt-0.5 text-center">Canada</div>
+              </div>
             </div>
           </div>
 

@@ -45,10 +45,10 @@ export default function GallerySection() {
           </div>
         </div>
 
-        {/* Mosaic — centred */}
-        <div className="grid grid-cols-3 grid-rows-2 gap-2.5 h-[500px] max-w-4xl mx-auto">
+        {/* Gallery — uniform centered grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-4xl mx-auto">
           {images.map((img, i) => (
-            <div key={i} className={`${img.col} group relative overflow-hidden`}
+            <div key={i} className="group relative overflow-hidden aspect-square"
               style={{ border: "1px solid rgba(255,255,255,0.05)" }}>
               <Image src={img.src} alt={img.alt} fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700" unoptimized />

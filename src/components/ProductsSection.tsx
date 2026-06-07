@@ -51,10 +51,6 @@ export default function ProductsSection() {
             <span className="text-white">Choose Your </span>
             <span className="gold-shimmer">Weapon.</span>
           </h2>
-          <a href="https://site-oysa6lo54.godaddysites.com/shop" target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-gray-500 hover:text-[#f5c842] transition-colors duration-200">
-            View All Gloves <span className="text-[#f5c842]">→</span>
-          </a>
         </div>
 
         {/* Cards — centred grid */}

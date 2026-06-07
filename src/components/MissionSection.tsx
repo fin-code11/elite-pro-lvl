@@ -20,8 +20,8 @@ export default function MissionSection() {
         </div>
 
         <p
-          className="font-black uppercase leading-tight text-white mb-8 mx-auto"
-          style={{ fontSize: "clamp(1.4rem, 3.2vw, 2.6rem)", letterSpacing: "-0.01em", maxWidth: "820px" }}
+          className="font-black uppercase leading-tight text-white mb-8 text-center"
+          style={{ fontSize: "clamp(1.4rem, 3.2vw, 2.6rem)", letterSpacing: "-0.01em", maxWidth: "780px", margin: "0 auto 2rem" }}
         >
           To create{" "}
           <span className="gold-shimmer">elite-level gloves</span>
@@ -30,7 +30,7 @@ export default function MissionSection() {
           {" "}or compromise in quality.
         </p>
 
-        <p className="text-gray-500 text-sm leading-relaxed max-w-xl mx-auto mb-12">
+        <p className="text-gray-500 text-sm leading-relaxed text-center mb-12" style={{ maxWidth: "520px", margin: "0 auto 3rem" }}>
           Founded by keepers who understand the demands of the position. We exist to serve
           athletes who train hard, compete fearlessly, and expect their equipment to perform under pressure.
         </p>

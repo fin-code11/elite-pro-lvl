@@ -10,11 +10,13 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black border-t border-blue-900/20 py-12 px-6">
+    <footer className="relative bg-black border-t border-blue-900/20 pt-16 pb-10 px-6">
       <div className="absolute top-0 left-0 right-0 h-1 colour-stream opacity-60" />
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-10 mb-10">
+      <div className="max-w-6xl mx-auto">
+        {/* Main grid — more vertical room */}
+        <div className="grid md:grid-cols-3 gap-12 mb-16">
+
           {/* Brand */}
           <div>
             <Image
@@ -22,7 +24,7 @@ export default function Footer() {
               alt="Elite Pro LVL"
               width={140}
               height={46}
-              className="object-contain mb-4"
+              className="object-contain mb-5"
               unoptimized
             />
             <p className="text-gray-500 text-sm leading-relaxed">
@@ -30,10 +32,12 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Nav links */}
+          {/* Navigation */}
           <div>
-            <div className="text-xs tracking-widest uppercase text-[#f5c842] font-semibold mb-4">Navigation</div>
-            <ul className="space-y-2">
+            <div className="text-xs tracking-widest uppercase text-[#f5c842] font-semibold mb-6">
+              Navigation
+            </div>
+            <ul className="space-y-3">
               {navLinks.map((l) => (
                 <li key={l.label}>
                   <Link
@@ -49,8 +53,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <div className="text-xs tracking-widest uppercase text-[#f5c842] font-semibold mb-4">Contact</div>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <div className="text-xs tracking-widest uppercase text-[#f5c842] font-semibold mb-6">
+              Contact
+            </div>
+            <ul className="space-y-3 text-sm text-gray-400">
               <li>Hamilton, ON, Canada</li>
               <li>
                 <a href="mailto:Deryk@eliteprolvl.com" className="hover:text-[#f5c842] transition-colors">
@@ -63,7 +69,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-            <div className="flex gap-4 mt-4">
+            <div className="flex gap-4 mt-6">
               {[
                 { href: "https://www.facebook.com/eliteprolvl", label: "FB" },
                 { href: "https://www.instagram.com/eliteprolvl", label: "IG" },
@@ -83,11 +89,26 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-blue-900/20 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-600">
+        {/* Copyright bar — clearly separated */}
+        <div className="border-t border-blue-900/20 pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-600">
           <span>© 2026 Elite Pro LVL — Goalkeeper Gloves. All Rights Reserved.</span>
           <div className="flex gap-4">
-            <a href="https://site-oysa6lo54.godaddysites.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-[#f5c842] transition-colors">Privacy Policy</a>
-            <a href="https://site-oysa6lo54.godaddysites.com/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-[#f5c842] transition-colors">Terms & Conditions</a>
+            <a
+              href="https://site-oysa6lo54.godaddysites.com/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#f5c842] transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="https://site-oysa6lo54.godaddysites.com/terms-and-conditions"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#f5c842] transition-colors"
+            >
+              Terms &amp; Conditions
+            </a>
           </div>
         </div>
       </div>

@@ -60,23 +60,19 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative w-full h-screen overflow-hidden">
-      {/* Soccer video background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <iframe
-          src="https://www.youtube.com/embed/bA1wiFq5u0Y?autoplay=1&mute=1&loop=1&playlist=bA1wiFq5u0Y&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&start=8"
-          className="absolute"
-          style={{
-            top: "50%", left: "50%",
-            width: "177.78vh", height: "100vh",
-            minWidth: "100vw", minHeight: "56.25vw",
-            transform: "translate(-50%, -50%)",
-            pointerEvents: "none", border: "none",
-          }}
-          allow="autoplay; encrypted-media"
-          allowFullScreen={false}
-          title="Soccer background"
-        />
-      </div>
+      {/* Soccer video background — direct MP4 via Pexels free CDN */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: "brightness(0.5) saturate(1.2)" }}
+      >
+        <source src="https://videos.pexels.com/video-files/3048526/3048526-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/3048526/3048526-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/856958/856958-hd_1920_1080_25fps.mp4" type="video/mp4" />
+      </video>
 
       {/* Overlays */}
       <div className="absolute inset-0 bg-black/65" />

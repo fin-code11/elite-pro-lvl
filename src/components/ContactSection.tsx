@@ -1,15 +1,25 @@
 "use client";
 import { useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [newsletterDone, setNewsletterDone] = useState(false);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [newsletterEmail, setNewsletterEmail] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    await supabase.from("contact_submissions").insert({ name, email, message });
     setSubmitted(true);
+  };
+
+  const handleNewsletter = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await supabase.from("newsletter_subscribers").insert({ email: newsletterEmail });
+    setNewsletterDone(true);
   };
 
   return (
@@ -147,20 +157,26 @@ export default function ContactSection() {
             <span className="gold-shimmer">Get 10% Off</span> Your First Order
           </h3>
           <p className="text-gray-400 text-sm mb-6">Sign up for our newsletter, promo list and future drops.</p>
-          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              required
-              className="flex-1 bg-black/50 border border-blue-900/40 focus:border-[#f5c842] text-white px-4 py-3 text-sm outline-none"
-              placeholder="Enter your email"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 text-sm font-black tracking-wider uppercase text-black bg-[#f5c842] hover:bg-[#ffd44d] transition-all whitespace-nowrap"
-            >
-              Sign Up
-            </button>
-          </form>
+          {newsletterDone ? (
+            <p className="text-[#f5c842] font-bold tracking-wider uppercase text-sm">You&apos;re in! Check your inbox for your 10% off code.</p>
+          ) : (
+            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={handleNewsletter}>
+              <input
+                type="email"
+                required
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                className="flex-1 bg-black/50 border border-blue-900/40 focus:border-[#f5c842] text-white px-4 py-3 text-sm outline-none"
+                placeholder="Enter your email"
+              />
+              <button
+                type="submit"
+                className="px-6 py-3 text-sm font-black tracking-wider uppercase text-black bg-[#f5c842] hover:bg-[#ffd44d] transition-all whitespace-nowrap"
+              >
+                Sign Up
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </section>

@@ -54,7 +54,7 @@ export default function ProductsSection() {
         </div>
 
         {/* Cards — centred grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6" style={{ maxWidth: "896px", marginLeft: "auto", marginRight: "auto" }}>
           {products.map((p) => (
             <div key={p.name}
               className="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2"

@@ -30,118 +30,87 @@ const products = [
 
 export default function ProductsSection() {
   return (
-    <section id="products" className="relative min-h-screen flex items-center px-6 overflow-hidden bg-black">
-
-      {/* Subtle diagonal accent */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-[0.04]"
+    <section id="products"
+      className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-black">
+      <div className="absolute top-0 right-0 w-96 h-96 opacity-[0.04]"
         style={{ background: "radial-gradient(circle at 80% 20%, #0066ff 0%, transparent 60%)" }} />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] opacity-[0.04]"
+      <div className="absolute bottom-0 left-0 w-72 h-72 opacity-[0.04]"
         style={{ background: "radial-gradient(circle at 20% 80%, #f5c842 0%, transparent 60%)" }} />
 
-      <div className="max-w-7xl mx-auto w-full py-32">
+      <div className="w-full max-w-6xl mx-auto py-24">
 
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
-          <div>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-px w-10 bg-[#f5c842]" />
-              <span className="text-[10px] tracking-[0.5em] uppercase text-[#f5c842] font-bold">Featured Products</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl xl:text-7xl font-black uppercase leading-none">
-              <span className="text-white block">Choose Your</span>
-              <span className="gold-shimmer block">Weapon.</span>
-            </h2>
+        {/* Header — centred */}
+        <div className="text-center mb-14">
+          <div className="flex items-center justify-center gap-4 mb-5">
+            <div className="h-px w-10 bg-[#f5c842]" />
+            <span className="text-[9px] tracking-[0.5em] uppercase text-[#f5c842] font-bold">Featured Products</span>
+            <div className="h-px w-10 bg-[#f5c842]" />
           </div>
-          <a
-            href="https://site-oysa6lo54.godaddysites.com/shop"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 text-sm font-bold tracking-wider uppercase text-gray-400 hover:text-[#f5c842] transition-colors duration-200 whitespace-nowrap"
-          >
+          <h2 className="font-black uppercase leading-none mb-4"
+            style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.8rem)" }}>
+            <span className="text-white">Choose Your </span>
+            <span className="gold-shimmer">Weapon.</span>
+          </h2>
+          <a href="https://site-oysa6lo54.godaddysites.com/shop" target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-gray-500 hover:text-[#f5c842] transition-colors duration-200">
             View All Gloves <span className="text-[#f5c842]">→</span>
           </a>
         </div>
 
-        {/* Product cards */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-10">
+        {/* Cards — centred grid */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {products.map((p) => (
-            <div
-              key={p.name}
-              className="group relative overflow-hidden transition-all duration-500 hover:-translate-y-3"
+            <div key={p.name}
+              className="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2"
               style={{
                 background: "rgba(255,255,255,0.02)",
                 border: "1px solid rgba(255,255,255,0.06)",
-                clipPath: "polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px))",
-                boxShadow: `0 0 0 rgba(${p.glowRgb},0)`,
-                transition: "transform 0.5s, box-shadow 0.5s",
+                clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))",
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.boxShadow = `0 20px 60px rgba(${p.glowRgb},0.15), 0 0 0 1px rgba(${p.glowRgb},0.2)`;
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.boxShadow = `0 0 0 rgba(${p.glowRgb},0)`;
-              }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = `0 20px 50px rgba(${p.glowRgb},0.12), 0 0 0 1px rgba(${p.glowRgb},0.18)`; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}
             >
               {/* Badge */}
-              <div className="absolute top-5 left-5 z-20 px-3 py-1 text-[10px] font-black tracking-[0.3em] uppercase text-black"
+              <div className="absolute top-4 left-4 z-20 px-2.5 py-1 text-[9px] font-black tracking-[0.3em] uppercase text-black"
                 style={{ background: p.accent }}>
                 {p.badge}
               </div>
 
               {/* Image */}
-              <div className="relative h-80 overflow-hidden"
+              <div className="relative h-64 overflow-hidden"
                 style={{ background: "linear-gradient(160deg, #0a0a0a 0%, #111 100%)" }}>
-                <Image
-                  src={p.img}
-                  alt={`${p.name} ${p.series}`}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  unoptimized
-                />
-                {/* Image overlay on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500"
+                <Image src={p.img} alt={`${p.name} ${p.series}`} fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700" unoptimized />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-25 transition-opacity duration-500"
                   style={{ background: `radial-gradient(circle at 50% 60%, rgba(${p.glowRgb},1) 0%, transparent 70%)` }} />
               </div>
 
               {/* Content */}
-              <div className="p-8 space-y-5">
+              <div className="p-6 space-y-4">
                 <div>
-                  <div className="text-[10px] tracking-[0.4em] uppercase mb-2"
-                    style={{ color: p.accent }}>{p.series}</div>
-                  <h3 className="text-4xl font-black uppercase text-white">{p.name}</h3>
-                  <div className="text-sm text-gray-500 mt-1">{p.variant}</div>
+                  <div className="text-[9px] tracking-[0.4em] uppercase mb-1.5" style={{ color: p.accent }}>{p.series}</div>
+                  <h3 className="text-3xl font-black uppercase text-white">{p.name}</h3>
+                  <div className="text-xs text-gray-500 mt-1">{p.variant}</div>
                 </div>
-
                 <div className="h-px bg-white/5" />
-
-                <ul className="space-y-2.5">
+                <ul className="space-y-2">
                   {p.features.map((f) => (
-                    <li key={f} className="flex items-center gap-3 text-sm text-gray-400">
+                    <li key={f} className="flex items-center gap-2.5 text-xs text-gray-400">
                       <div className="w-1 h-1 rounded-full shrink-0" style={{ background: p.accent }} />
                       {f}
                     </li>
                   ))}
                 </ul>
-
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-3xl font-black" style={{ color: p.accent }}>{p.price}</span>
-                  <a
-                    href={p.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-2.5 text-xs font-black tracking-[0.2em] uppercase text-black transition-all duration-200 hover:brightness-110"
-                    style={{
-                      background: p.accent,
-                      clipPath: "polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px))",
-                    }}
-                  >
+                <div className="flex items-center justify-between pt-1">
+                  <span className="text-2xl font-black" style={{ color: p.accent }}>{p.price}</span>
+                  <a href={p.href} target="_blank" rel="noopener noreferrer"
+                    className="px-5 py-2 text-[9px] font-black tracking-[0.2em] uppercase text-black hover:brightness-110 transition-all duration-200"
+                    style={{ background: p.accent, clipPath: "polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px))" }}>
                     Shop Now
                   </a>
                 </div>
               </div>
-
-              {/* Bottom accent */}
-              <div className="h-0.5 colour-stream opacity-40" />
+              <div className="h-px colour-stream opacity-30" />
             </div>
           ))}
         </div>
